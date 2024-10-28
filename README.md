@@ -1,6 +1,6 @@
 # plain-lambda
 
-An AWS Lambda function using Rust to demonstrate S3 object transformation during a GetObject request.
+An AWS Lambda function using Rust to demonstrate S3 object transformation during a GetObject request, with support for the Range header to fetch specific byte ranges.
 
 ## Build and Deploy
 
@@ -20,6 +20,8 @@ mount-s3 <Object Lambda Access Point Alias> /path/to/mnt/name
 ```
 
 Open the `/path/to/mnt/name/sonnets.txt` and you should see the content of the original object transformed by the Lambda function.
+
+> To enable an Object Lambda Access Point to accept such requests, you must include `GetObject-Range` in the `AllowedFeatures` section of your Object Lambda Access Point configuration.
 
 ## Related Links
 
