@@ -1,0 +1,25 @@
+[package]
+name = "plain-lambda"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+async-trait = "0.1.82"
+aws-config = "1.5.5"
+aws-sdk-s3 = "1.48.0"
+aws-smithy-http = "0.60.10"
+aws-smithy-types = "1.2.4"
+aws_lambda_events = "0.15.1"
+bytes = "1.7.1"
+futures = "0.3.30"
+hyper = "0.14.30"
+lambda_runtime = "0.13.0"
+mime = "0.3.17"
+openssl = { version = "0.10.66", features = ["vendored"] }
+reqwest = { version = "0.12.7", features = ["stream"] }
+serde = "1.0.209"
+tokio = { version = "1.40.0", features = ["macros"] }
+tokio-util = "0.7.12"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", default-features = false, features = ["ansi", "fmt"] }
+ureq = "2.10.1"
